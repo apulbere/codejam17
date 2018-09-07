@@ -1,0 +1,22 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'com.apulbere'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.10
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.7'
+    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.10'
+}
